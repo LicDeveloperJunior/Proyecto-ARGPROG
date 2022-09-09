@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sobre-mi.component.less']
 })
 export class SobreMiComponent implements OnInit {
-
+  datos:any;
   constructor() { }
 
   ngOnInit(): void {

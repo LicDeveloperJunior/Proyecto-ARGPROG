@@ -17,7 +17,13 @@ describe('InicioComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debería crearse InicioComponent', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('Debería renderizar los datos', () => {
+    const fixture = TestBed.createComponent(InicioComponent);
+    const inicio = fixture.componentInstance;
+    expect(inicio.datos).toBeTruthy();
   });
 });

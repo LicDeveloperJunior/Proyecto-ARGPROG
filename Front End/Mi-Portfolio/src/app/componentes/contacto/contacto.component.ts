@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacto.component.less']
 })
 export class ContactoComponent implements OnInit {
-
+  datos:any;
   constructor() { }
 
   ngOnInit(): void {

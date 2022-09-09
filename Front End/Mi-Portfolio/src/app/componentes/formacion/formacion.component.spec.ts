@@ -17,7 +17,13 @@ describe('FormacionComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debería crearse FormacionComponent', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('Debería renderizar los datos', () => {
+    const fixture = TestBed.createComponent(FormacionComponent);
+    const formacion = fixture.componentInstance;
+    expect(formacion.datos).toBeTruthy();
   });
 });

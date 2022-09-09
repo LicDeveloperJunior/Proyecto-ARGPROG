@@ -17,7 +17,13 @@ describe('SobreMiComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debería crearse SobreMiComponent', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('Debería renderizar los datos', () => {
+    const fixture = TestBed.createComponent(SobreMiComponent);
+    const sobreMi = fixture.componentInstance;
+    expect(sobreMi.datos).toBeTruthy();
   });
 });

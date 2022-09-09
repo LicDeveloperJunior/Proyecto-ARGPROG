@@ -17,7 +17,13 @@ describe('ContactoComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debería crearse ContactoComponent', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('Debería renderizar los datos', () => {
+    const fixture = TestBed.createComponent(ContactoComponent);
+    const contacto = fixture.componentInstance;
+    expect(contacto.datos).toBeTruthy();
   });
 });

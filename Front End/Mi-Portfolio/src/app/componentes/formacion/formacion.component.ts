@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formacion.component.less']
 })
 export class FormacionComponent implements OnInit {
-
+  datos:any;
   constructor() { }
 
   ngOnInit(): void {

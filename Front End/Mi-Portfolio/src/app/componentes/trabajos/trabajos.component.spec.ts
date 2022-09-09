@@ -17,7 +17,13 @@ describe('TrabajosComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debería crearse TrabajosComponent', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('Debería renderizar los datos', () => {
+    const fixture = TestBed.createComponent(TrabajosComponent);
+    const trabajos = fixture.componentInstance;
+    expect(trabajos.datos).toBeTruthy();
   });
 });

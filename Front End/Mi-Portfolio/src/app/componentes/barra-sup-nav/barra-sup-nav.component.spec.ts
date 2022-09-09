@@ -17,7 +17,7 @@ describe('BarraSupNavComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Deberia crearse BarraSupNavComponent', () => {
     expect(component).toBeTruthy();
   });
 });
