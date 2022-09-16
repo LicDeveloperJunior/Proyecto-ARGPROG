@@ -12,6 +12,10 @@ describe('Test BarraLatNavComponent', () => {
       declarations: [ BarraLatNavComponent ]
     })
     .compileComponents();
+
+    fixture = TestBed.createComponent(BarraLatNavComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
   it('Debe de existir el componente BarraLatNavComponent', () => {
