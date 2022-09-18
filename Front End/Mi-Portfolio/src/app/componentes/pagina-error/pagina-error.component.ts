@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faSadCry } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-pagina-error',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagina-error.component.less']
 })
 export class PaginaErrorComponent implements OnInit {
-
+  caritaTriste = faSadCry;
   constructor() { }
 
   ngOnInit(): void {

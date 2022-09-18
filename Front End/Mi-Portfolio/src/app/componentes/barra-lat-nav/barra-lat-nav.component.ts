@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./barra-lat-nav.component.less']
 })
 export class BarraLatNavComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
