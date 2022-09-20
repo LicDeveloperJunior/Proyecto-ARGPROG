@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Argentina Programa</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -34,6 +34,8 @@
         </li>
       </ul>
     </div>
-    <button type="button" class="btn btn-success">Log in</button>
+    <button (click)="cambiarTema('default')">Default</button>
+    <button (click)="cambiarTema('dark')">Dark</button>
+    <button type="button" class="btn">Log in</button>
   </div>
 </nav>
