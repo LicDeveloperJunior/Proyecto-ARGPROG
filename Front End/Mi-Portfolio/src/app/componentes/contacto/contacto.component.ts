@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faMobileScreenButton, faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contacto',
@@ -8,7 +8,9 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 })
 export class ContactoComponent implements OnInit {
   datos:any;
-  telef = faPhone;
+  telef = faMobileScreenButton;
+  lugar = faLocationDot;
+  email = faEnvelope;
   constructor() { }
 
   ngOnInit(): void {
