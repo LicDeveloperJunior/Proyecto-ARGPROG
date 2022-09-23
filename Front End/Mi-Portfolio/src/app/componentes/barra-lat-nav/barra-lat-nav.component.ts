@@ -10,4 +10,12 @@ export class BarraLatNavComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  openNav() {
+    document.getElementById("mySidebar")!.style.width="270px";
+  }
+
+  closeNav() {
+    document.getElementById("mySidebar")!.style.width="0";
+  }
 }
