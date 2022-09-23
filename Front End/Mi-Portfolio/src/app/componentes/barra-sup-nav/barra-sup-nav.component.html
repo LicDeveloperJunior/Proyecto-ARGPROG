@@ -1,41 +1,42 @@
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Argentina Programa</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-2 mb-lg-0 mx-5">
-        <li class="nav-item">
-          <a class="nav-link" href="#">
+<nav class="navbar navbar-expand-md align-items-center justify-content-between p-3">
+  <a class="navbar-brand d-sm-block d-none" href="javascript:void(0)">Argentina Programa</a>
+  <div class="links d-flex align-items-center">
+    <div class="dropdown mx-2">
+      <button class="dropdown-toggle btn" type="button" data-bs-toggle="dropdown">
+        redes
+      </button>
+      <ul class="dropdown-menu text-center">
+        <li>
+          <a class="dropdown-item" href="#">
             <fa-icon [icon]="face"></fa-icon>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
+        <li>
+          <a class="dropdown-item" href="#">
             <fa-icon [icon]="insta"></fa-icon>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
+        <li>
+          <a class="dropdown-item" href="#">
             <fa-icon [icon]="git"></fa-icon>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
+        <li>
+          <a class="dropdown-item" href="#">
             <fa-icon [icon]="link"></fa-icon>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
+        <li>
+          <a class="dropdown-item" href="#">
             <fa-icon [icon]="what"></fa-icon>
           </a>
         </li>
       </ul>
     </div>
-    <button (click)="cambiarTema('default')">Default</button>
-    <button (click)="cambiarTema('dark')">Dark</button>
-    <button type="button" class="btn">Log in</button>
+    <button (click)="cambiarTema()" class="mx-2 btn">
+      <fa-icon [icon]="dark" *ngIf="temaActual == 'default'"></fa-icon>
+      <fa-icon [icon]="light" *ngIf="temaActual == 'dark'"></fa-icon>
+    </button>
+    <button type="button" class="btn mx-2">login</button>
   </div>
 </nav>
