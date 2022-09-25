@@ -1,5 +1,6 @@
 export interface IPropiedadesTema{
-  colorPrimario: string;
+  colorFuerte: string;
+  colorDebil: string;
   textoPrimario: string;
   tamanioTextoPorDefecto: string;
 }

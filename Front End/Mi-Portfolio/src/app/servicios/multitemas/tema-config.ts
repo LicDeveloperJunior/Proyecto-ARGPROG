@@ -1,13 +1,15 @@
 import {ITema} from "./itema-interface"
 export const TEMAS: ITema = {
   default: {
-    colorPrimario: '#1B2631',
-    textoPrimario: '#EAECEE',
+    colorFuerte: '#005227',
+    colorDebil: '#038554',
+    textoPrimario: 'white',
     tamanioTextoPorDefecto: '20px'
   },
   dark: {
-    colorPrimario: '#202124',
-    textoPrimario: '#bdc1c6',
+    colorFuerte: '#1e1e1e',
+    colorDebil: 'black',
+    textoPrimario: '#bfbfbf',
     tamanioTextoPorDefecto: '20px'
   }
 }
