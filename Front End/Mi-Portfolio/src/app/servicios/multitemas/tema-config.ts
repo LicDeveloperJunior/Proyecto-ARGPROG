@@ -3,13 +3,13 @@ export const TEMAS: ITema = {
   default: {
     colorFuerte: '#005227',
     colorDebil: '#038554',
-    textoPrimario: 'white',
-    tamanioTextoPorDefecto: '20px'
+    textoPrimario: '#dfdfcc',
+    tamanioTextoPorDefecto: '26px'
   },
   dark: {
-    colorFuerte: '#1e1e1e',
-    colorDebil: 'black',
+    colorFuerte: 'black',
+    colorDebil: '#1e1e1e',
     textoPrimario: '#bfbfbf',
-    tamanioTextoPorDefecto: '20px'
+    tamanioTextoPorDefecto: '23px'
   }
 }
