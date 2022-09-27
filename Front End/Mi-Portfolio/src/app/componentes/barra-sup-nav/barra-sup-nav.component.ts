@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faInstagram, faFacebook, faWhatsapp, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faMoon, faSun, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun, faBars, faUserSecret } from '@fortawesome/free-solid-svg-icons';
 import { TemaService } from 'src/app/servicios/multitemas/tema.service';
 
 @Component({
@@ -18,6 +18,7 @@ export class BarraSupNavComponent implements OnInit {
   dark = faMoon;
   light = faSun;
   menu = faBars;
+  user = faUserSecret;
 
   temaActual: string;
 
