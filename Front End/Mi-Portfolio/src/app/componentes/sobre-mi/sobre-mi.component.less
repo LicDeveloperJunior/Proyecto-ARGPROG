@@ -1,12 +1,29 @@
-.progress-bar {
-  background: var(--colorPrimario);
-}
-
-.btn:hover {
+.sobre-mi {
+  background: linear-gradient(var(--colorFuerte), var(--colorDebil));
   color: var(--textoPrimario);
-  background: var(--colorPrimario);
-}
+  overflow: auto;
 
-.experiencia {
-  display: none;
+  .container-fluid {
+    .row {
+      .hab-item {
+        p {
+          font-family: monospace;
+          font-size: var(--tamanioTextoPorDefecto);
+          margin: 0;
+        }
+
+        .progress .progress-bar {
+          background: var(--colorDebil);
+        }
+      }
+    }
+  }
+
+  .btn {
+    color: var(--textoPrimario);
+  }
+
+  .btn:hover {
+    background: var(--colorDebil);
+  }
 }
