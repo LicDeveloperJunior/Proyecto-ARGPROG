@@ -1,12 +1,9 @@
 <aside id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">x</a>
-  <div class="nav">
-    <div class="navbar-brand">
-      <a href=""><span>A</span>gustin<br><span>C</span>ollueque</a>
-    </div>
-    <ul class="nav-tabs">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()"><fa-icon [icon]="close"></fa-icon></a>
+  <div class="nav" id="aside">
+    <ul class="nav-tabs" id="listaBarraLat">
       <li class="nav-item">
-        <a class="nav-link active" routerLink="/inicio">Inicio</a>
+        <a class="nav-link" routerLink="/inicio">Inicio</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/sobre-mi">Sobre Mi</a>
@@ -23,4 +20,4 @@
     </ul>
   </div>
 </aside>
-<a href="javascript:void(0)" class="openbtn" (click)="openNav()">abc</a>
+<a href="javascript:void(0)" class="openbtn" (click)="openNav()"><fa-icon [icon]="open"></fa-icon></a>

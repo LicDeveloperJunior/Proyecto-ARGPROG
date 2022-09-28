@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
+import {faAnglesRight, faXmark} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-barra-lat-nav',
@@ -6,16 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./barra-lat-nav.component.less']
 })
 export class BarraLatNavComponent implements OnInit {
-  constructor() { }
+  open = faAnglesRight;
+  close = faXmark;
 
-  ngOnInit(): void {
-  }
+  constructor(@Inject(DOCUMENT) private dom: Document) {}
+
+  ngOnInit(): void {}
 
   openNav() {
-    document.getElementById("mySidebar")!.style.width="270px";
+    this.dom.getElementById("mySidebar")!.style.width="270px";
   }
 
   closeNav() {
-    document.getElementById("mySidebar")!.style.width="0";
+    this.dom.getElementById("mySidebar")!.style.width="0";
   }
 }
