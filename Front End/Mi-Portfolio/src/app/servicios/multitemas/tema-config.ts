@@ -4,12 +4,16 @@ export const TEMAS: ITema = {
     colorFuerte: '#005227',
     colorDebil: '#038554',
     textoPrimario: '#dfdfcc',
-    tamanioTextoPorDefecto: '26px'
+    textoChico: '1em',
+    textoMediano: '1.4em',
+    textoGrande: '1.6em'
   },
   dark: {
     colorFuerte: 'black',
     colorDebil: '#1e1e1e',
     textoPrimario: '#bfbfbf',
-    tamanioTextoPorDefecto: '23px'
+    textoChico: '1em',
+    textoMediano: '1.4em',
+    textoGrande: '1.6em'
   }
 }

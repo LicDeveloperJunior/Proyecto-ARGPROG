@@ -2,7 +2,9 @@ export interface IPropiedadesTema{
   colorFuerte: string;
   colorDebil: string;
   textoPrimario: string;
-  tamanioTextoPorDefecto: string;
+  textoChico: string;
+  textoMediano: string;
+  textoGrande: string;
 }
 
 export interface ITema {

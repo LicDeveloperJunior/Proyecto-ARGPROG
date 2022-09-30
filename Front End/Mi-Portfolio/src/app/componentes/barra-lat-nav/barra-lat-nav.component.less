@@ -2,10 +2,10 @@
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 20;
+  z-index: 1;
   top: 0;
   left: 0;
-  background: linear-gradient(var(--colorFuerte), var(--colorDebil));
+  background: linear-gradient(var(--colorDebil), var(--colorFuerte));
   overflow-x: hidden;
   transition: 0.5s;
 
@@ -38,7 +38,7 @@
     a {
       padding: 8px 8px 8px 32px;
       text-decoration: none;
-      font-size: 25px;
+      font-size: var(--tamanioTexto);
       color: var(--textoPrimario);
       display: block;
     }
@@ -61,11 +61,6 @@
 
 .openbtn:hover {
   border: 1px solid var(--colorDebil);
-}
-
-@media screen and (max-height: 450px) {
-  .sidebar{padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
 }
 
 @media (min-width: 999px) {

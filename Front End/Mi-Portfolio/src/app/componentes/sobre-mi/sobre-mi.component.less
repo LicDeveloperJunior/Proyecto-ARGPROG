@@ -2,13 +2,26 @@
   color: var(--textoPrimario);
   overflow-x: hidden;
 
+  .mi-perfil {
+    font-size: var(--textoMediano);
+  }
+
+  .info-personal .info-item {
+    p {
+      font-size: var(--textoChico);
+      span {
+        font-size: var(--textoChico);
+      }
+    }
+  }
+
   .container-fluid {
     .row {
       .hab-item {
         p {
           font-family: monospace;
-          font-size: var(--tamanioTextoPorDefecto);
           margin: 0;
+          font-family: var(--textoChico);
         }
 
         .progress .progress-bar {
@@ -20,10 +33,10 @@
 
   .btn {
     color: var(--textoPrimario);
+    font-size: var(--textoChico);
   }
 
   .btn:hover {
     background: var(--colorDebil);
   }
 }
-
