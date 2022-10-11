@@ -12,6 +12,8 @@ import { FormacionComponent } from './componentes/formacion/formacion.component'
 import { TrabajosComponent } from './componentes/trabajos/trabajos.component';
 import { PaginaErrorComponent } from './componentes/pagina-error/pagina-error.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

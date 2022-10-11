@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-sobre-mi',
@@ -6,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sobre-mi.component.less']
 })
 export class SobreMiComponent implements OnInit {
-  datos:any;
   constructor() { }
 
   ngOnInit(): void {
