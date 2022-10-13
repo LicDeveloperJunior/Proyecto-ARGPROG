@@ -3,7 +3,7 @@ package com.agustincollueque.portfolio.controller;
 import com.agustincollueque.portfolio.model.Formacion;
 import com.agustincollueque.portfolio.service.IFormacionService;
 import java.util.List;
-import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/formacion")
-@NoArgsConstructor
 public class FormacionController {
+    @Autowired
     private IFormacionService servForm;
         
   @GetMapping("/")

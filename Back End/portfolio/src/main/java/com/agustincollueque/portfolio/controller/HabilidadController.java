@@ -3,7 +3,7 @@ package com.agustincollueque.portfolio.controller;
 import com.agustincollueque.portfolio.model.Habilidad;
 import com.agustincollueque.portfolio.service.IHabilidadService;
 import java.util.List;
-import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,9 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/habilidad")
-@NoArgsConstructor
 public class HabilidadController {
-
+    @Autowired
     private IHabilidadService servHab;
 
     @GetMapping("/{id}")

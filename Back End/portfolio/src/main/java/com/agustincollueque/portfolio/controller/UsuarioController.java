@@ -3,6 +3,7 @@ package com.agustincollueque.portfolio.controller;
 import com.agustincollueque.portfolio.model.Usuario;
 import com.agustincollueque.portfolio.service.IUsuarioService;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,11 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
-    private final IUsuarioService servUsu;
-    
-    public UsuarioController(IUsuarioService serv) {
-        this.servUsu = serv;
-    }
+    @Autowired
+    private IUsuarioService servUsu;
        
     @GetMapping("/{id}")
     @ResponseBody
