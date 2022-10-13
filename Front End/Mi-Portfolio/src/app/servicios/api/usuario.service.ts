@@ -14,7 +14,7 @@ export class UsuarioService {
   constructor(private http:HttpClient) { }
 
   public obtenerUsuario():Observable<IUsuario> {
-    return this.http.get<IUsuario>(`${this.url}/usuarios/12`);
+    return this.http.get<IUsuario>(`${this.url}/usuarios/1`);
   }
 
   public obtenerUsuarios():Observable<IUsuario[]> {

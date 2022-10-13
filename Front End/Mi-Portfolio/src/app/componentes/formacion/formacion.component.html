@@ -3,32 +3,13 @@
     <div class="titulo p-3">
       <h1>Formación</h1>
     </div>
-    <div class="row p-3">
+    <div class="row p-3" *ngFor="let formacion of this.formaciones">
       <div class="col">
-        <img src="assets/SISIRIUS.jpg" alt="img-item">
-        <h4>Centro de educación media n° 6</h4>
+        <img [src]="formacion.imagen" alt="img-item-formacion">
+        <h4>{{formacion.titulo}}</h4>
         <div class="descripcion p-2">
-          <p>Bachillerato en Matemática</p>
-          <p>5 años</p>
-          <a href="">enlace</a>
-        </div>
-      </div>
-      <div class="col">
-        <img src="assets/SISIRIUS.jpg" alt="img-item">
-        <h4>Centro de educación media n° 6</h4>
-        <div class="descripcion p-2">
-          <p>Bachillerato en Matemática</p>
-          <p>5 años</p>
-          <a href="">enlace</a>
-        </div>
-      </div>
-      <div class="col">
-        <img src="assets/SISIRIUS.jpg" alt="img-item">
-        <h4>Centro de educación media n° 6</h4>
-        <div class="descripcion p-2">
-          <p>Bachillerato en Matemática</p>
-          <p>5 años</p>
-          <a href="">enlace</a>
+          <p>{{formacion.tiempo}}</p>
+          <a [href]="formacion.enlace">link</a>
         </div>
       </div>
     </div>

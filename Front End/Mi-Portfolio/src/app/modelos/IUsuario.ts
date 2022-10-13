@@ -5,4 +5,8 @@ export interface IUsuario {
   fechaNacimiento: string;
   descripcion: string;
   domicilio: string;
+  estado: string;
+  telefono :string;
+  email: string;
+  contrasenia: string;
 }

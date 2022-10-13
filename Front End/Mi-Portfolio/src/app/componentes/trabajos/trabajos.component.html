@@ -4,16 +4,11 @@
   </div>
   <div class="container">
     <h3>Mis últimos proyectos</h3>
-    <div class="row text-center">
+    <div class="row text-center" *ngFor="let trabajo of this.trabajos">
       <div class="col">
-        <p>Proyecto 1</p>
-        <img src="assets/SISIRIUS.jpg" alt="img-proy-1">
-        <p>Descripcion</p>
-      </div>
-      <div class="col">
-        <p>Proyecto 1</p>
-        <img src="assets/SISIRIUS.jpg" alt="img-proy-1">
-        <p>Descripcion</p>
+        <p>{{trabajo.nombre}}</p>
+        <img [src]="trabajo.imagen" alt="img-item-proyecto">
+        <p>{{trabajo.descripcion}}</p>
       </div>
     </div>
   </div>

@@ -16,17 +16,15 @@ public class Formacion {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
-    private String logoEmpresa;
-    private String empresa;
-    private String descripcion;
+    private String tiempo;
+    private String titulo;
     private String enlace;
     private String imagen;
 
-    public Formacion(Long id, String logoEmpresa, String empresa, String descripcion, String enlace, String imagen) {
+    public Formacion(Long id, String tiempo, String empresa, String descripcion, String enlace, String imagen) {
         this.id = id;
-        this.logoEmpresa = logoEmpresa;
-        this.empresa = empresa;
-        this.descripcion = descripcion;
+        this.tiempo = tiempo;
+        this.titulo = descripcion;
         this.enlace = enlace;
         this.imagen = imagen;
     }

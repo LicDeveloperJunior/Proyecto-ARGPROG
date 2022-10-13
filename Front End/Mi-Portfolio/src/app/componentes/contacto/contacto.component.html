@@ -5,20 +5,20 @@
     </div>
     <h4>¿Tienes alguna pregunta?</h4>
     <h5>Estoy a tu servicio</h5>
-    <div class="row">
+    <div class="row" *ngIf="this.usuario">
       <div class="col">
         <p>
-          <fa-icon [icon]="telef"></fa-icon><br>+54 294 471 6770
+          <fa-icon [icon]="telef"></fa-icon><br>{{this.usuario.telefono}}
         </p>
       </div>
       <div class="col">
         <p>
-          <fa-icon [icon]="lugar"></fa-icon><br>Jorge Newbery 1800
+          <fa-icon [icon]="lugar"></fa-icon><br>{{this.usuario.domicilio}}
         </p>
       </div>
       <div class="col">
         <p>
-          <fa-icon [icon]="email"></fa-icon><br>agustincv1997@gmail.com
+          <fa-icon [icon]="email"></fa-icon><br>{{this.usuario.email}}
         </p>
       </div>
     </div>

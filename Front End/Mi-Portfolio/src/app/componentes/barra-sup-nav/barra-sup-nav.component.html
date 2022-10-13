@@ -34,10 +34,11 @@
       </ul>
       <div class="botones d-flex">
         <button (click)="cambiarTema()" class="mx-2 btn">
-          <fa-icon [icon]="dark" *ngIf="temaActual == 'default'"></fa-icon>
-          <fa-icon [icon]="light" *ngIf="temaActual == 'dark'"></fa-icon>
+          <fa-icon [icon]="dark" *ngIf="temaActual === 'default'"></fa-icon>
+          <fa-icon [icon]="light" *ngIf="temaActual === 'dark'"></fa-icon>
         </button>
-        <button type="button" class="btn mx-2"> <fa-icon [icon]="user"></fa-icon> </button>
+        <button type="button" class="btn mx-2" *ngIf="this.usuario"> <fa-icon [icon]="user"></fa-icon> </button>
+        <button type="button" class="btn mx-2" *ngIf="this.usuario === null"> <fa-icon [icon]="login"></fa-icon> </button>
       </div>
     </div>
   </div>

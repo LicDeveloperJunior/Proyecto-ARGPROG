@@ -20,13 +20,21 @@ public class Usuario {
     private String fechaNacimiento;
     private String descripcion;
     private String domicilio;
+    private String estado;
+    private String telefono;
+    private String email;
+    private String contrasenia;
 
-    public Usuario(Long id, String nombre, String apellido, String fechaNacimiento, String descripcion, String domicilio) {
+    public Usuario(Long id, String nombre, String apellido, String fechaNacimiento, String descripcion, String domicilio, String estado, String telefono, String email, String contrasenia) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNacimiento = fechaNacimiento;
         this.descripcion = descripcion;
         this.domicilio = domicilio;
-    }    
+        this.estado = estado;
+        this.telefono = telefono;
+        this.email = email;
+        this.contrasenia = contrasenia;
+    }
 }

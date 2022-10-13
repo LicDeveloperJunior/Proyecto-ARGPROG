@@ -8,18 +8,18 @@
         <br>Soy un apasionado por el desarrollo web y estoy en búsqueda constante del conocimiento.
       </p>
     </div>
-    <div class="row row-cols-2 info-personal">
+    <div class="row row-cols-2 info-personal" *ngIf="this.usuario">
       <div class="info-item">
-        <p>Fecha de Nacimiento: <span>07/11/1997</span></p>
+        <p>Fecha de Nacimiento: <span>{{this.usuario.fechaNacimiento}}</span></p>
       </div>
       <div class="info-item">
-        <p>Fecha de Nacimiento: <span>07/11/1997</span></p>
+        <p>Nombre: <span>{{this.usuario.nombre}}</span></p>
       </div>
       <div class="info-item">
-        <p>Fecha de Nacimiento: <span>07/11/1997</span></p>
+        <p>Apellido: <span>{{this.usuario.apellido}}</span></p>
       </div>
       <div class="info-item">
-        <p>Fecha de Nacimiento: <span>07/11/1997</span></p>
+        <p>Estado civil: <span>{{this.usuario.estado}}</span></p>
       </div>
     </div>
     <div>
@@ -29,32 +29,11 @@
   </div>
   <div class="container-fluid p-5">
     <h1>Habilidades</h1>
-    <div class="row">
+    <div class="row" *ngFor="let habilidad of this.habilidades">
       <div class="col-12 col-sm-6 hab-item pe-5 pb-3">
-        <p>HTML</p>
+        <p>{{this.habilidad.nombre}}</p>
         <div class="progress">
-          <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 hab-item pe-5 pb-3">
-        <p>CSS</p>
-        <div class="progress">
-          <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 hab-item pe-5 pb-3">
-        <p>Javascript</p>
-        <div class="progress">
-          <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 hab-item pe-5 pb-3">
-        <p>Bootstrap</p>
-        <div class="progress">
-          <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
           </div>
         </div>
       </div>

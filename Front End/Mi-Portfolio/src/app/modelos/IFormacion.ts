@@ -1,8 +1,7 @@
 export interface IFormacion {
   id: Number;
-  empresa: string;
-  logoEmpresa: string;
-  descripcion: string;
+  tiempo: string;
+  titulo: string;
   enlace: string;
   imagen: string;
 }
