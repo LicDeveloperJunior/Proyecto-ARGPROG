@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, ObservedValueOf } from 'rxjs';
 import { IHabilidad } from 'src/app/modelos/IHabilidad';
 import { environment } from 'src/environments/environment';
 
@@ -19,8 +19,12 @@ export class HabilidadService {
     return this.http.get<IHabilidad[]>(`${this.url}/habilidad/`);
   }
 
-  public agregarHabilidad(habilidad:IHabilidad):Observable<void> {
-      return this.http.post<void>(`${this.url}/habilidad/agregar`,habilidad);
+  public agregarHabilidad(habilidad:IHabilidad):Observable<IHabilidad> {
+      return this.http.post<IHabilidad>(`${this.url}/habilidad/agregar`,habilidad);
+  }
+
+  public actualizarHabilidad(habilidad:IHabilidad):Observable<IHabilidad> {
+    return this.http.post<IHabilidad>(`${this.url}/habilidad/editar`, habilidad);
   }
 
   public eliminarHabilidad(id:number):Observable<void> {

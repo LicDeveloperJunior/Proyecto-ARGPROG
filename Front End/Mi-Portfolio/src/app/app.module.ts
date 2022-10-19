@@ -14,6 +14,9 @@ import { PaginaErrorComponent } from './componentes/pagina-error/pagina-error.co
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HabilidadComponent } from './componentes/habilidad/habilidad.component';
+import { ModalAddHabComponent } from './componentes/modal-add-hab/modal-add-hab.component';
+import { ModalEditHabComponent } from './componentes/modal-edit-hab/modal-edit-hab.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { FormsModule } from '@angular/forms';
     InicioComponent,
     FormacionComponent,
     TrabajosComponent,
-    PaginaErrorComponent
+    PaginaErrorComponent,
+    HabilidadComponent,
+    ModalAddHabComponent,
+    ModalEditHabComponent
   ],
   imports: [
     BrowserModule,
