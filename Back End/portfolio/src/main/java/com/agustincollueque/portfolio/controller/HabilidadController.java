@@ -34,6 +34,11 @@ public class HabilidadController {
     public void agregarHabilidad(@RequestBody Habilidad hab) {
         servHab.crearHabilidad(hab);
     }
+    
+    @PostMapping("/editar")
+    public Habilidad editarHabilidad(@RequestBody Habilidad hab) {
+        return servHab.modificarHabilidad(hab);
+    }
 
     @DeleteMapping("/eliminar/{id}")
     public void eliminarHabilidad(@PathVariable("id") Long id) {

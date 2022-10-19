@@ -1,0 +1,26 @@
+<div class="container-fluid p-5">
+  <div class="d-flex justify-content-center">
+    <h1>Habilidades</h1>
+    <app-modal-hab></app-modal-hab>
+  </div>
+  <div class="row" *ngFor="let habilidad of this.habilidades">
+    <div class="col-12 col-sm-6 hab-item pe-5 pb-3 align-center">
+      <div class="d-flex justify-content-center">
+        <p>{{this.habilidad.nombre}}</p>
+        <img [src]="this.habilidad.logo" alt="logo-item" width="25px">
+        <div class="d-flex">
+          <div id="modal-edit">
+            <app-modal-edit-hab [editHabilidad]="this.habilidad"></app-modal-edit-hab>
+          </div>
+          <div id="modal-remove">
+            <button class="btn btn-outline-danger" type="submit" (click)="eliminarHabilidad(habilidad.id)"><fa-icon [icon]="remove"></fa-icon></button>
+          </div>
+        </div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        </div>
+      </div>
+    </div>
+  </div>
+

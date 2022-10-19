@@ -6,7 +6,7 @@ import java.util.List;
 public interface IHabilidadService {
     public void crearHabilidad(Habilidad hab);
     public void eliminarHabilidad(Long id);
-    public void modificarHabilidad(Habilidad hab);
+    public Habilidad modificarHabilidad(Habilidad hab);
     public Habilidad obtenerHabilidad(Long id);
     public List<Habilidad> obtenerHabilidades();
 }

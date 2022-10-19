@@ -23,9 +23,9 @@ public class HabilidadService implements IHabilidadService {
     }
 
     @Override
-    public void modificarHabilidad(Habilidad hab) {
+    public Habilidad modificarHabilidad(Habilidad hab) {
         if (habRepo.existsById(hab.getId())) {
-            habRepo.save(hab);
+            return habRepo.save(hab);
         } else {
             throw new HabilidadNotFoundException("¡La habilidad no existe! No se puede modificar.");
         }
