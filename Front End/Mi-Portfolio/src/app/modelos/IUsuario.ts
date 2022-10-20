@@ -9,4 +9,5 @@ export interface IUsuario {
   telefono :string;
   email: string;
   contrasenia: string;
+  foto: string;
 }

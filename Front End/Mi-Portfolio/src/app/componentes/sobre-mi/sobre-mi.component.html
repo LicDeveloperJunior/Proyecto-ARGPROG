@@ -8,19 +8,16 @@
     </div>
     <div class="row row-cols-2 info-personal" *ngIf="this.usuario">
       <div class="info-item d-flex justify-content-center">
-        <p>Fecha de Nacimiento: <span>{{this.usuario.fechaNacimiento}}</span></p>
+        <p><b>Fecha de Nacimiento: </b><span>{{this.usuario.fechaNacimiento}}</span></p>
       </div>
       <div class="info-item d-flex align-items-baseline justify-content-center">
-        <p>Nombre: <span>{{this.usuario.nombre}}</span></p>
-        <button type="button" class="btn" *ngIf="this.usuario"><fa-icon [icon]="edit"></fa-icon></button>
+        <p><b>Nombres: </b><span>{{this.usuario.nombre}}</span></p>
       </div>
       <div class="info-item d-flex align-items-baseline justify-content-center">
-        <p>Apellido: <span>{{this.usuario.apellido}}</span></p>
-        <button type="button" class="btn" *ngIf="this.usuario"><fa-icon [icon]="edit"></fa-icon></button>
+        <p><b>Apellidos: </b><span>{{this.usuario.apellido}}</span></p>
       </div>
       <div class="info-item d-flex align-items-baseline justify-content-center">
-        <p>Estado civil: <span>{{this.usuario.estado}}</span></p>
-        <button type="button" class="btn" *ngIf="this.usuario"><fa-icon [icon]="edit"></fa-icon></button>
+        <p><b>Estado civil: </b><span>{{this.usuario.estado}}</span></p>
       </div>
     </div>
     <div>

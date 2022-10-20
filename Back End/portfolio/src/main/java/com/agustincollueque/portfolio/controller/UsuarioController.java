@@ -21,22 +21,27 @@ public class UsuarioController {
        
     @GetMapping("/{id}")
     @ResponseBody
-    public Usuario obtenerPersona(@PathVariable Long id) {
+    public Usuario obtenerUsuario(@PathVariable Long id) {
         return servUsu.obtenerUsuario(id);
     }
     
     @PostMapping("/agregar")
-    public void agregarPersona(@RequestBody Usuario pers) {
-        servUsu.crearUsuario(pers);
+    public void agregarUsuario(@RequestBody Usuario usu) {
+        servUsu.crearUsuario(usu);
+    }
+    
+    @PostMapping("/editar")
+    public Usuario editarUsuario(@RequestBody Usuario usu) {
+        return servUsu.editarUsuario(usu);
     }
     
     @DeleteMapping("/eliminar/{id}")
-    public void eliminarPersona(@PathVariable Long id) {
+    public void eliminarUsuario(@PathVariable Long id) {
         servUsu.eliminarUsuario(id);
     }
     
     @GetMapping("/")
-    public List<Usuario> verPersonas() {
+    public List<Usuario> verUsuarios() {
         return servUsu.obtenerUsuarios();
     }
 }

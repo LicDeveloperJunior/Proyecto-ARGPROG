@@ -24,8 +24,9 @@ public class Usuario {
     private String telefono;
     private String email;
     private String contrasenia;
+    private String foto;
 
-    public Usuario(Long id, String nombre, String apellido, String fechaNacimiento, String descripcion, String domicilio, String estado, String telefono, String email, String contrasenia) {
+    public Usuario(Long id, String nombre, String apellido, String fechaNacimiento, String descripcion, String domicilio, String estado, String telefono, String email, String contrasenia, String foto) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -36,5 +37,6 @@ public class Usuario {
         this.telefono = telefono;
         this.email = email;
         this.contrasenia = contrasenia;
+        this.foto = foto;
     }
 }

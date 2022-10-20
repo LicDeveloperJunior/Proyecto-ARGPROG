@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { IUsuario } from 'src/app/modelos/IUsuario';
 import { UsuarioService } from 'src/app/servicios/api/usuario.service';
 import { faPencil, faTrashCan, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { NgForm } from '@angular/forms';
+import { IHabilidad } from 'src/app/modelos/IHabilidad';
 
 @Component({
   selector: 'app-sobre-mi',

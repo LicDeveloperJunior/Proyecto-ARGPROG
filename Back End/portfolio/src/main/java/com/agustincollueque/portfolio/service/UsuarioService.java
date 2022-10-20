@@ -17,6 +17,11 @@ public class UsuarioService implements IUsuarioService {
     public void crearUsuario(Usuario user) {
         usuRepo.save(user);
     }
+    
+    @Override
+    public Usuario editarUsuario(Usuario user) {
+        return usuRepo.save(user);
+    }
 
     @Override
     public void eliminarUsuario(Long id) {

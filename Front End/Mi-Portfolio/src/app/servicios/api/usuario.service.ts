@@ -24,4 +24,8 @@ export class UsuarioService {
   public agregarUsuario(usuario: IUsuario):Observable<void> {
     return this.http.post<void>(`${this.url}/usuarios/agregar`, usuario);
   }
+
+  public editarUsuario(usuario: IUsuario):Observable<IUsuario> {
+    return this.http.post<IUsuario>(`${this.url}/usuarios/editar`, usuario);
+  }
 }
