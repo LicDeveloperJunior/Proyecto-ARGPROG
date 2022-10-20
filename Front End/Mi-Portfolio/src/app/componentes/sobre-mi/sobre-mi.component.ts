@@ -1,10 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { IHabilidad } from 'src/app/modelos/IHabilidad';
 import { IUsuario } from 'src/app/modelos/IUsuario';
-import { HabilidadService } from 'src/app/servicios/api/habilidad.service';
 import { UsuarioService } from 'src/app/servicios/api/usuario.service';
-import { environment } from 'src/environments/environment';
+import { faPencil, faTrashCan, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-sobre-mi',
@@ -12,35 +10,36 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./sobre-mi.component.less']
 })
 export class SobreMiComponent implements OnInit {
-  public usuario? :IUsuario;
-  public habilidades! :IHabilidad[];
-  constructor(private usuarioService :UsuarioService,
-     private habilidadService :HabilidadService) { }
+  edit = faPencil;
+  remove = faTrashCan;
+  add = faPlus;
+
+  public usuario?: IUsuario;
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
     this.obtenerUsuario();
-    this.obtenerHabildades();
   }
 
   public obtenerUsuario() {
     this.usuarioService.obtenerUsuario().subscribe({
-      next:(response:IUsuario | undefined) => {
+      next: (response: IUsuario | undefined) => {
         this.usuario = response;
       },
-      error:(error: HttpErrorResponse) => {
+      error: (error: HttpErrorResponse) => {
         alert(error.message)
       }
     })
   }
 
-  public obtenerHabildades() {
-    this.habilidadService.obtenerHabilidades().subscribe({
-      next: (response :IHabilidad[]) => {
-        this.habilidades = response;
-      },
-      error: (error :HttpErrorResponse) => {
-        alert(error.message);
-      }
-    })
+  public calcularEdad(fechaNac: string) {
+    const hoy: Date = new Date();
+    const fechaNacimiento: Date = new Date(fechaNac);
+    let edad: number = hoy.getFullYear() - fechaNacimiento.getFullYear();
+    const mes: number = hoy.getMonth() - fechaNacimiento.getMonth();
+    if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+        edad--;
+    }
+    return edad;
   }
 }

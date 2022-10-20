@@ -2,9 +2,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { IHabilidad } from 'src/app/modelos/IHabilidad';
 import { HabilidadService } from 'src/app/servicios/api/habilidad.service';
-import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faTrashCan, faPlus, faPencil } from '@fortawesome/free-solid-svg-icons';
 import { NgForm } from '@angular/forms';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-habilidad',
@@ -13,8 +12,11 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HabilidadComponent implements OnInit {
   public habilidades :IHabilidad[] = [];
-  remove = faTrashCan;
-  constructor(private habilidadService :HabilidadService, private modalService :NgbModal) { }
+  eliminarIcon = faTrashCan;
+  agregarIcon = faPlus;
+  editarIcon = faPencil;
+  editHabilidad?: IHabilidad;
+  constructor(private habilidadService :HabilidadService) { }
 
   ngOnInit(): void {
     this.obtenerHabildades();
@@ -31,9 +33,33 @@ export class HabilidadComponent implements OnInit {
     })
   }
 
-  public eliminarHabilidad(idHab :number) {
-    this.habilidadService.eliminarHabilidad(idHab).subscribe({
+  public agregarHabilidad(formHab: NgForm) {
+    this.habilidadService.agregarHabilidad(formHab.value).subscribe({
       next: () => {
+        formHab.reset();
+        this.obtenerHabildades();
+      },
+      error: (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    })
+  }
+
+  public eliminarHabilidad(id: number) {
+    this.habilidadService.eliminarHabilidad(id).subscribe({
+      next: () => {
+        this.obtenerHabildades();
+      },
+      error: (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    })
+  }
+
+  public editarHabilidad(formHab: NgForm) {
+    this.habilidadService.actualizarHabilidad(formHab.value).subscribe({
+      next: () => {
+        formHab.reset();
         this.obtenerHabildades();
       },
       error: (error: HttpErrorResponse) => {

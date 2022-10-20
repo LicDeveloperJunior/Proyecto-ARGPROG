@@ -15,8 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HabilidadComponent } from './componentes/habilidad/habilidad.component';
-import { ModalAddHabComponent } from './componentes/modal-add-hab/modal-add-hab.component';
-import { ModalEditHabComponent } from './componentes/modal-edit-hab/modal-edit-hab.component';
+import { ModalComponent } from './componentes/modals/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +29,7 @@ import { ModalEditHabComponent } from './componentes/modal-edit-hab/modal-edit-h
     TrabajosComponent,
     PaginaErrorComponent,
     HabilidadComponent,
-    ModalAddHabComponent,
-    ModalEditHabComponent
+    ModalComponent
   ],
   imports: [
     BrowserModule,
