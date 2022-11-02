@@ -6,7 +6,9 @@ import com.agustincollueque.portfolio.repository.TrabajoRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Transactional
 @Service
 public class TrabajoService implements ITrabajoService{
     @Autowired
@@ -23,9 +25,9 @@ public class TrabajoService implements ITrabajoService{
     }
 
     @Override
-    public void modificarTrabajo(Trabajo trab) {
-        if (trabRepo.existsById(trab.getId())) {
-            trabRepo.save(trab);
+    public Trabajo modificarTrabajo(Trabajo trab) {
+        if (trabRepo.existsById(trab.getIdTrab())) {
+            return trabRepo.save(trab);
         } else {
             throw new TrabajoNotFoundException("¡El trabajo no existe! No se pudo modificar.");
         }

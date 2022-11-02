@@ -14,7 +14,7 @@ import lombok.Setter;
 public class Formacion {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long idForm;
     
     private String tiempo;
     private String titulo;
@@ -22,7 +22,7 @@ public class Formacion {
     private String imagen;
 
     public Formacion(Long id, String tiempo, String empresa, String descripcion, String enlace, String imagen) {
-        this.id = id;
+        this.idForm = id;
         this.tiempo = tiempo;
         this.titulo = descripcion;
         this.enlace = enlace;

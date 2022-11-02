@@ -14,14 +14,14 @@ import lombok.Setter;
 public class Habilidad {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long idHab;
     
     private String nombre;
     private String porcentaje;
     private String logo;
 
     public Habilidad(Long id, String nombre, String porcentaje, String logo) {
-        this.id = id;
+        this.idHab = id;
         this.nombre = nombre;
         this.porcentaje = porcentaje;
         this.logo = logo;

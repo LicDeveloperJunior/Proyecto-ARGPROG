@@ -6,7 +6,7 @@ import java.util.List;
 public interface ITrabajoService {
     public void crearTrabajo(Trabajo trab);
     public void eliminarTrabajo(Long id);
-    public void modificarTrabajo(Trabajo trab);
+    public Trabajo modificarTrabajo(Trabajo trab);
     public Trabajo obtenerTrabajo(Long id);
     public List<Trabajo> obtenerTrabajos();
 }

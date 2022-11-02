@@ -6,8 +6,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.agustincollueque.portfolio.exception.FormacionNotFoundException;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class FormacionService implements IFormacionService{
     @Autowired
     FormacionRepository formRepo;
@@ -23,17 +25,16 @@ public class FormacionService implements IFormacionService{
     }
 
     @Override
-    public boolean modificarFormacion(Formacion form) {
-        if (formRepo.existsById(form.getId())){
-            formRepo.save(form);
-            return true;
+    public Formacion modificarFormacion(Formacion form) {
+        if (formRepo.existsById(form.getIdForm())){
+            return formRepo.save(form);
         } 
-        return false;
+        throw new FormacionNotFoundException("¡La formacion no existe! No se puede modificar.");
     }
 
     @Override
     public Formacion obtenerFormacion(Long id) {
-        return formRepo.findById(id).orElseThrow(() -> new FormacionNotFoundException("¡La formacion no existe! No se pudo modificar. "));
+        return formRepo.findById(id).orElseThrow(() -> new FormacionNotFoundException("¡La formacion no existe!"));
     }
 
     @Override

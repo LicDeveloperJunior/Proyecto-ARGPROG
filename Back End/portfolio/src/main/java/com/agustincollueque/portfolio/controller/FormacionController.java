@@ -15,26 +15,32 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/formacion")
 public class FormacionController {
+
     @Autowired
     private IFormacionService servForm;
-        
-  @GetMapping("/")
+
+    @GetMapping("/")
     public List<Formacion> obtenerFormaciones() {
         return servForm.obtenerFormaciones();
     }
-    
+
     @GetMapping("/{id}")
     public Formacion obtenerFormacion(@PathVariable("id") Long id) {
         return servForm.obtenerFormacion(id);
     }
-    
-    @PostMapping("/agregar")    
+
+    @PostMapping("/agregar")
     public void agregarFormacion(@RequestBody Formacion form) {
         servForm.crearFormacion(form);
     }
-    
+
+    @PostMapping("/editar")
+    public void editarFormacion(@RequestBody Formacion form) {
+        servForm.modificarFormacion(form);
+    }
+
     @DeleteMapping("/eliminar/{id}")
     public void eliminarFormacion(@PathVariable("id") Long id) {
         servForm.eliminarFormacion(id);
-    }  
+    }
 }

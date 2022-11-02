@@ -15,9 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/trabajos")
 public class TrabajoController {
+
     @Autowired
     private ITrabajoService servTrab;
-        
+
     @GetMapping("/")
     public List<Trabajo> obtenerTrabajos() {
         return servTrab.obtenerTrabajos();
@@ -30,6 +31,11 @@ public class TrabajoController {
 
     @PostMapping("/agregar")
     public void agregarTrabajo(@RequestBody Trabajo trab) {
+        servTrab.crearTrabajo(trab);
+    }
+
+    @PostMapping("/editar")
+    public void editarTrabajo(@RequestBody Trabajo trab) {
         servTrab.crearTrabajo(trab);
     }
 

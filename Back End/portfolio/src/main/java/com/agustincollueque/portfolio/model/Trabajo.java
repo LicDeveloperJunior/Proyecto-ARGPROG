@@ -14,14 +14,14 @@ import lombok.Setter;
 public class Trabajo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long idTrab;
     
     private String nombre;
     private String descripcion;
     private String imagen;
 
     public Trabajo(Long id, String nombre, String descripcion, String imagen) {
-        this.id = id;
+        this.idTrab = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.imagen = imagen;
