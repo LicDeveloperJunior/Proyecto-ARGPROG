@@ -7,12 +7,13 @@
   left: 0;
   background: linear-gradient(var(--colorDebil), var(--colorFuerte));
   overflow-x: hidden;
+  overflow-y: hidden;
   transition: 0.5s;
 
   .closebtn {
     display: none;
     position: absolute;
-    margin-top: 30%;
+    top: 110px;
     right: 25px;
     font-size: 30px;
     color: var(--textoPrimario);
@@ -24,23 +25,29 @@
 
   .nav {
     height: 100%;
-    align-content: center;
+    margin-top: 100px;
 
     .nav-tabs {
       border-bottom: none;
-      height: 40%;
+      align-self: center;
 
       .nav-item {
-        margin: 20% 0;
-      }
-    }
+        width: 200px;
+        height: 100px;
 
-    a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: var(--tamanioTexto);
-      color: var(--textoPrimario);
-      display: block;
+        a {
+          text-decoration: none;
+          color: var(--textoPrimario);
+          font-family: sans-serif;
+          font-style: italic;
+          font-size: var(--textoGrande);
+          width: 100%;
+          height: 100%;
+          align-self: center;
+          display: flex;
+          align-items: center;
+        }
+      }
     }
   }
 }
@@ -65,12 +72,28 @@
 
 @media (min-width: 999px) {
   .sidebar {
-    width: 270px!important;
+    width: 300px !important;
   }
 }
 
 @media (max-width:999px) {
-  .openbtn, .closebtn {
-    display: block!important;
+
+  .openbtn,
+  .closebtn {
+    display: block !important;
+  }
+
+  .sidebar .nav .nav-tabs .nav-item {
+    a {
+      font-size: var(--textoMediano);
+    }
+  }
+}
+
+@media (max-width: 699px) {
+  .sidebar .nav .nav-tabs .nav-item {
+    a {
+      font-size: var(--textoChico);
+    }
   }
 }

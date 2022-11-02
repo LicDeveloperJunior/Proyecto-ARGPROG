@@ -57,4 +57,8 @@ export class BarraSupNavComponent implements OnInit {
       }
     })
   }
+
+  isLogin():boolean {
+    return false;
+  }
 }

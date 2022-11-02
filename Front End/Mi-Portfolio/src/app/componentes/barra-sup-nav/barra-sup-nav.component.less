@@ -1,64 +1,42 @@
 .navbar {
-  height: 10%;
   z-index: 10;
 
   .container-fluid {
-    .navbar-brand {
-      font-family: 'Roboto', sans-serif;
-      font-size: var(--tamanioTitulo);
+    fa-icon {
+      font-size: 1.5em;
       color: var(--textoPrimario);
+      margin: 0 1em;
+      &:hover {
+        font-size: 1.6em;
+      }
     }
 
-    .navbar-toggler{
-
-
-    .navbar-toggler-icon {
-      background-image: none;
-      font-size: 25px;
-      display: inline;
-    }}
-
-    .nav-item {
-      margin-right: 35px;
+    .navbar-toggler {
+      .navbar-toggler-icon {
+        background-image: none;
+        display: inline;
+      }
     }
 
     .navbar-collapse {
-      .navbar-nav {
-        .nav-item {
-          .nav-link {
-            fa-icon {
-              color: var(--textoPrimario);
-              font-size: 20px;
-            }
-
-            fa-icon:hover {
-              color: white;
-            }
-          }
-        }
-      }
-
-      .botones {
-        .btn:hover {
-          color: white;
-        }
-
-        button {
-          color: var(--textoPrimario);
-        }
-      }
+      justify-content: flex-end;
     }
   }
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 999px) {
   .show {
     display: flex;
   }
 
-  .navbar-collapse {
-    .navbar-nav {
-      flex-direction: row;
+  .container-fluid {
+    .navbar-collapse {
+      padding: 0 30px;
+
+      .navbar-nav {
+        flex-direction: row;
+      }
     }
   }
 }
