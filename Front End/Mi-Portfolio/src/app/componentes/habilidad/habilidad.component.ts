@@ -26,6 +26,7 @@ export class HabilidadComponent implements OnInit {
     this.habilidadService.obtenerHabilidades().subscribe({
       next: (response :IHabilidad[]) => {
         this.habilidades = response;
+        console.log(response)
       },
       error: (error :HttpErrorResponse) => {
         alert(error.message);
@@ -34,6 +35,7 @@ export class HabilidadComponent implements OnInit {
   }
 
   public agregarHabilidad(formHab: NgForm) {
+    console.log(formHab.value);
     this.habilidadService.agregarHabilidad(formHab.value).subscribe({
       next: () => {
         formHab.reset();
@@ -57,6 +59,7 @@ export class HabilidadComponent implements OnInit {
   }
 
   public editarHabilidad(formHab: NgForm) {
+    console.log(formHab.value);
     this.habilidadService.actualizarHabilidad(formHab.value).subscribe({
       next: () => {
         formHab.reset();
@@ -66,5 +69,9 @@ export class HabilidadComponent implements OnInit {
         alert(error.message);
       }
     })
+  }
+
+  estaLogeado():boolean {
+    return false;
   }
 }

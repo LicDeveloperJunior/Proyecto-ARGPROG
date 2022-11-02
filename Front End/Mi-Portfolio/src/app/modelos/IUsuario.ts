@@ -8,6 +8,5 @@ export interface IUsuario {
   estado: string;
   telefono :string;
   email: string;
-  contrasenia: string;
   foto: string;
 }

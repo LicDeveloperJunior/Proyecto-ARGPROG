@@ -43,4 +43,11 @@ export class InicioComponent implements OnInit {
     })
   }
 
+  estaLogeado():boolean {
+    if (this.usuario != null || undefined) {
+      return true;
+    }
+    return false;
+  }
+
 }

@@ -42,10 +42,10 @@
           <fa-icon [icon]="dark" *ngIf="temaActual === 'default'"></fa-icon>
           <fa-icon [icon]="light" *ngIf="temaActual === 'dark'"></fa-icon>
         </button>
-        <button type="button" *ngIf="isLogin()">
+        <button type="button" class="btn" *ngIf="estaLogeado()">
           <fa-icon [icon]="user"></fa-icon>
         </button>
-        <button type="button" *ngIf="!isLogin()">
+        <button type="button" class="btn" *ngIf="!estaLogeado()">
           <fa-icon [icon]="login"></fa-icon>
         </button>
       </div>

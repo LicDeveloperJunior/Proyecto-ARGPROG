@@ -19,6 +19,10 @@ export class TrabajoService {
     return this.http.get<ITrabajo[]>(`${this.url}/trabajos/`);
   }
 
+  public actualizarTrabajo(trabajo:ITrabajo):Observable<void> {
+    return this.http.post<void>(`${this.url}/trabajos/editar`,trabajo);
+  }
+
   public eliminarTrabajo(id:number):Observable<void> {
     return this.http.delete<void>(`${this.url}/trabajos/eliminar/${id}`);
   }

@@ -23,6 +23,10 @@ export class FormacionService {
     return this.http.post<IFormacion>(`${this.url}/formacion/agregar`, formacion)
   }
 
+  public actualizarFormacion(formacion :IFormacion):Observable<IFormacion> {
+    return this.http.post<IFormacion>(`${this.url}/formacion/editar`, formacion)
+  }
+
   public eliminarFormacion(id:Number):Observable<void> {
     return this.http.delete<void>(`${this.url}/formacion/eliminar/${id}`);
   }

@@ -1,5 +1,5 @@
 export interface IHabilidad {
-  id: number;
+  idHab: number;
   nombre: string;
   porcentaje: string;
   logo: string;

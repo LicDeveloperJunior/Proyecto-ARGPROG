@@ -1,5 +1,5 @@
 export interface IFormacion {
-  id: Number;
+  idForm: number;
   tiempo: string;
   titulo: string;
   enlace: string;

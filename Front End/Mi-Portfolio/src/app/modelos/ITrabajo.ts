@@ -1,5 +1,5 @@
 export interface ITrabajo {
-  id: Number;
+  idTrab: number;
   nombre: string;
   descripcion: string;
   imagen: string;
